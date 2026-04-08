@@ -323,7 +323,7 @@ def train(model_type='unet', epochs=50, batch_size=8, learning_rate=1e-4,
     # Loss function and optimizer
     criterion = CombinedLoss(alpha=0.5)
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=5, verbose=True)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=5)
 
     # Training history
     history = {

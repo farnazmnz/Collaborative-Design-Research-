@@ -2,10 +2,13 @@ import os
 import h5py
 import numpy as np
 import torch
+import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 import random
 from sklearn.model_selection import train_test_split
+
+TARGET_SIZE = 256
 
 
 class BrainTumorDataset(Dataset):
@@ -53,6 +56,11 @@ class BrainTumorDataset(Dataset):
         # Convert to torch tensors
         image = torch.from_numpy(image).float()
         mask = torch.from_numpy(mask).float()
+
+        # Resize to fixed size if needed
+        if image.shape[-1] != TARGET_SIZE or image.shape[-2] != TARGET_SIZE:
+            image = F.interpolate(image.unsqueeze(0), size=(TARGET_SIZE, TARGET_SIZE), mode='bilinear', align_corners=False).squeeze(0)
+            mask = F.interpolate(mask.unsqueeze(0), size=(TARGET_SIZE, TARGET_SIZE), mode='nearest').squeeze(0)
 
         return image, mask
 

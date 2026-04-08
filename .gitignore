@@ -41,3 +41,6 @@ runs/
 Thumbs.db
 
 brain_tumor_dataset
+.venv
+venv311
+dataset_samples_png
