@@ -3,7 +3,7 @@
 This project implements **U-Net** and **Attention U-Net** models for **brain tumor segmentation from MRI images**.  
 The goal is to automatically identify tumor regions using deep learning techniques and compare segmentation performance.
 
----
+
 
 ## 📌 Important
 
