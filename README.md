@@ -12,7 +12,7 @@ All source code and notebooks are located in the **master branch**.
 👉 Click here to view the full implementation:  
 https://github.com/farnazmnz/Collaborative-Design-Research-/tree/master
 
----
+
 
 ## 🧠 Models Implemented
 
@@ -21,7 +21,7 @@ https://github.com/farnazmnz/Collaborative-Design-Research-/tree/master
 - Dice + IoU evaluation  
 - MRI preprocessing pipeline  
 
----
+
 
 ## 📂 Files (master branch)
 
@@ -32,7 +32,7 @@ https://github.com/farnazmnz/Collaborative-Design-Research-/tree/master
 - `dataset_visualization.ipynb` — data visualization  
 - `main.py` — training entry point  
 
----
+
 
 ## 📊 Dataset
 
@@ -47,7 +47,7 @@ The dataset contains **3064 MRI brain images** including:
 
 Images are resized, normalized, and used for segmentation training.
 
----
+
 
 ## 📈 Evaluation Metrics
 
